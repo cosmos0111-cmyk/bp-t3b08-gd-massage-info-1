@@ -305,132 +305,82 @@ a:hover {
 </head>
 <body>
 
-<!-- NAVIGATION -->
-<nav class="nav-bar">
-    <div class="nav-flex">
-        <a href="/" class="nav-logo">공덕마사지</a>
-        <button class="hamburger" id="hamburger-btn" aria-label="메뉴 열기">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-        <ul class="nav-links" id="nav-links">
-            <li><a href="/">홈</a></li>
-            <li><a href="/info">정보</a></li>
-            <li><a href="/pricing">가격</a></li>
-            <li><a href="/reviews">후기</a></li>
-            <li><a href="/contact">문의</a></li>
-        </ul>
+<main class="container">
+  <section class="card">
+    <h1>공덕역 마사지, 처음이라면 이렇게 확인하세요</h1>
+    <p>공덕역 인근에는 다양한 형태의 마사지 업체가 밀집해 있어 처음 방문하는 분들은 어떤 기준으로 선택해야 할지 막막할 수 있습니다. 이 페이지는 공덕 지역 마사지 이용 시 참고할 수 있는 기본 정보를 정리한 안내 자료입니다. 특정 업체를 추천하거나 평가하지 않으며, 이용 전 확인해두면 도움이 되는 일반적인 사항을 중심으로 구성했습니다.</p>
+  </section>
+
+  <section class="grid-3">
+    <div class="card">
+      <h2>위치 특징</h2>
+      <p>공덕역은 5개 노선이 교차하는 환승 거점으로, 역 주변에 오피스와 주거 밀집 지역이 함께 형성되어 있습니다. 도보 이동이 가능한 범위 안에 여러 업체가 모여 있어 접근성이 좋은 편입니다.</p>
     </div>
-</nav>
+    <div class="card">
+      <h2>운영 형태</h2>
+      <p>규모와 운영 방식은 업체마다 차이가 있습니다. 예약제로 운영되는 곳도 있고 방문 접수를 병행하는 곳도 있어, 방문 전 운영 방식을 확인하는 절차가 필요합니다.</p>
+    </div>
+    <div class="card">
+      <h2>이용 절차</h2>
+      <p>대부분 접수 후 대기 시간을 안내받고, 관리 유형과 소요 시간을 선택하는 순서로 진행됩니다. 초행이라면 소요 시간이 짧은 코스부터 문의해보는 것이 무난합니다.</p>
+    </div>
+  </section>
 
-<main class="container" style="padding-top: 2.5rem; padding-bottom: 2.5rem;">
+  <section>
+    <h2>가격이 결정되는 구조</h2>
+    <table class="data-table">
+      <thead>
+        <tr><th>구분</th><th>기준</th><th>참고 사항</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>관리 시간</td><td>60분 / 90분 / 120분 등 시간 단위</td><td>시간이 길어질수록 비용이 늘어나는 구조</td></tr>
+        <tr><td>관리 유형</td><td>부위별 관리, 전신 관리 등</td><td>업체별로 명칭과 구성이 다를 수 있음</td></tr>
+        <tr><td>지명 여부</td><td>담당자 지정 유무</td><td>지명 시 추가 비용이 발생하는 경우가 있음</td></tr>
+        <tr><td>운영 시간대</td><td>주간 / 야간 / 심야</td><td>시간대에 따라 정책이 달라질 수 있음</td></tr>
+      </tbody>
+    </table>
+    <p>정확한 금액은 업체마다 상이하므로, 방문 또는 전화 문의를 통해 직접 확인하는 것이 가장 정확합니다. 이 페이지에서는 특정 금액을 안내하지 않습니다.</p>
+  </section>
 
-    <h1>공덕 마사지 정보</h1>
-    <p style="font-size: 1.2rem; font-weight: 700; margin-bottom: 2rem; border-left: 6px solid #f1c40f; padding-left: 1rem;">공덕역 상권 마사지 업체에 대한 객관적 데이터 기반 분석 — 서비스 유형, 가격대, 만족도 평가 종합 정보</p>
+  <section class="grid-2">
+    <div class="card">
+      <h2>확인 체크리스트</h2>
+      <ul>
+        <li>운영 시간과 정기 휴무일</li>
+        <li>예약 필요 여부와 대기 시간</li>
+        <li>관리 유형별 소요 시간</li>
+        <li>주차 가능 여부</li>
+        <li>위생 및 개인 물품 정책</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h2>자주 헷갈리는 용어</h2>
+      <ul>
+        <li><strong>코스</strong> — 시간과 관리 범위를 묶어 놓은 단위</li>
+        <li><strong>지명</strong> — 특정 담당자를 지정해 요청하는 방식</li>
+        <li><strong>대기</strong> — 접수 후 순서를 기다리는 시간</li>
+        <li><strong>연장</strong> — 기본 코스 시간을 추가로 늘리는 것</li>
+      </ul>
+    </div>
+  </section>
 
-    <!-- SECTION 1: 업체 개요 데이터 -->
-    <section>
-        <h2>공덕역 마사지 업체 현황</h2>
-        <p>2024년 4분기 기준 공덕역 도보 5분 이내 운영 중인 마사지 업체는 총 12개소로 집계된다. 이 중 스웨디시 전문 업체 5개소, 타이마사지 전문 3개소, 지압/경락 중심 2개소, 복합 서비스 업체 2개소로 분류된다. 평균 운영 기간은 3.8년이며, 5년 이상 장기 운영 업체는 4개소에 해당한다.</p>
+  <section>
+    <h2>자주 묻는 질문</h2>
+    <div class="faq-item">
+      <p class="faq-question">Q. 예약 없이 방문해도 되나요?</p>
+      <p>업체에 따라 다릅니다. 예약제로만 운영되는 곳도 있으므로 방문 전 확인이 필요합니다.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-question">Q. 초행인데 어떤 코스가 무난한가요?</p>
+      <p>처음 이용한다면 표준 시간대의 기본 코스로 시작해 이후 필요에 따라 조정하는 방법을 많이 선택합니다.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-question">Q. 결제 수단은 어떻게 되나요?</p>
+      <p>현금과 카드 결제를 함께 운영하는 곳이 많지만 업체별로 정책이 다르므로 사전 확인이 안전합니다.</p>
+    </div>
+  </section>
+</main>
 
-        <table class="data-table">
-            <thead>
-                <tr>
-                    <th>업체 구분</th>
-                    <th>개소 수</th>
-                    <th>평균 가격대 (60분)</th>
-                    <th>평점 (5.0 기준)</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>스웨디시 전문</td>
-                    <td>5</td>
-                    <td>65,000~90,000원</td>
-                    <td>4.3</td>
-                </tr>
-                <tr>
-                    <td>타이마사지 전문</td>
-                    <td>3</td>
-                    <td>50,000~75,000원</td>
-                    <td>4.1</td>
-                </tr>
-                <tr>
-                    <td>지압/경락 전문</td>
-                    <td>2</td>
-                    <td>55,000~80,000원</td>
-                    <td>4.4</td>
-                </tr>
-                <tr>
-                    <td>복합 서비스</td>
-                    <td>2</td>
-                    <td>60,000~85,000원</td>
-                    <td>4.2</td>
-                </tr>
-            </tbody>
-        </table>
-        <p style="font-size: 0.9rem; color: #555;">※ 데이터 출처: 2024년 10월~12월 네이버 플레이스, 카카오맵 리뷰 집계 기준</p>
-    </section>
 
-    <!-- SECTION 2: 서비스 유형별 상세 정보 -->
-    <section>
-        <h2>서비스 유형별 상세 분석</h2>
-        <div class="grid-3">
-            <div class="card">
-                <h3>스웨디시 마사지</h3>
-                <p>공덕 지역 스웨디시는 전신 오일 마사지 기법을 기반으로 한다. 평균 세션 시간은 60~90분이며, 림프 순환 개선과 근육 이완에 초점을 맞춘다. 전체 이용자 중 42%가 스웨디시를 선호하는 것으로 조사되었다. 전문 자격증 보유 관리사 비율은 87%로 높은 편이다.</p>
-                <p style="margin-top: 0.8rem;"><strong>핵심 지표:</strong> 재방문율 63% | 평균 대기 시간 7분</p>
-            </div>
-            <div class="card">
-                <h3>타이마사지</h3>
-                <p>공덕 타이마사지 업체는 전통 태국식 스트레칭과 압박 기법을 적용한다. 90분 코스가 가장 보편적이며, 관절 가동성 개선에 효과적이라는 평가가 많다. 타이마사지 선택 비율은 31%로 두 번째로 높다. 업체별로 드라이 마사지와 오일 마사지 옵션을 제공한다.</p>
-                <p style="margin-top: 0.8rem;"><strong>핵심 지표:</strong> 재방문율 58% | 평균 대기 시간 5분</p>
-            </div>
-            <div class="card">
-                <h3>지압 / 경락 마사지</h3>
-                <p>지압 및 경락 마사지는 경혈 자극과 기(氣) 흐름 조절에 주력한다. 공덕 지역 지압 업체는 두개골, 어깨, 허리 부위 집중 관리가 특징이다. 전체 이용자 중 20%가 지압을 선호하며, 특히 40대 이상 연령층에서 수요가 높다. 지압 세션 평균 시간은 60분이다.</p>
-                <p style="margin-top: 0.8rem;"><strong>핵심 지표:</strong> 재방문율 71% | 평균 대기 시간 10분</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION 3: 가격 정보 테이블 -->
-    <section>
-        <h2>공덕 마사지 가격 정보</h2>
-        <table class="data-table">
-            <thead>
-                <tr>
-                    <th>서비스 유형</th>
-                    <th>50분</th>
-                    <th>60분</th>
-                    <th>90분</th>
-                    <th>120분</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>스웨디시</td>
-                    <td>55,000원</td>
-                    <td>65,000~80,000원</td>
-                    <td>85,000~110,000원</td>
-                    <td>120,000~150,000원</td>
-                </tr>
-                <tr>
-                    <td>타이마사지</td>
-                    <td>45,000원</td>
-                    <td>50,000~65,000원</td>
-                    <td>70,000~90,000원</td>
-                    <td>100,000~130,000원</td>
-                </tr>
-                <tr>
-                    <td>지압/경락</td>
-                    <td>50,000원</td>
-                    <td>55,000~70,000원</td>
-                    <td>80,000~100,000원</td>
-                    <td>110,000~140,000원</td>
-                </tr>
-                <tr>
-                    <td>복합 패키지</td>
 </body>
 </html>
