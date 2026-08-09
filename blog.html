@@ -1,76 +1,74 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>공덕 마사지 정보 블로그 | 스웨디시·타이마사지 전문가 인사이트</title>
-    <meta name="description" content="공덕 마사지 정보를 전문가 시각으로 분석합니다. 공덕역 주변 마사지 업체의 스웨디시, 타이마사지, 지압 비교 및 과학적 접근법 제공.">
-    <meta name="keywords" content="공덕 마사지 정보, 공덕역 마사지 블로그, 공덕 스웨디시 정보, 공덕 타이마사지 가이드, 공덕 지압 추천, 마사지 비교 분석">
-    <meta name="bpaas-design-system" content="brutalist-avantgarde">
-    <meta name="bpaas-design-theme" content="kr-raw-concrete">
-    <link rel="canonical" href="https://gongdeok-body-info.namanavi.com/blog.html">
-    <meta property="og:title" content="공덕 마사지 정보 블로그 | 스웨디시·타이마사지 전문가 인사이트">
-    <meta property="og:description" content="공덕 마사지 정보를 전문가 시각으로 분석합니다. 공덕역 주변 마사지 업체의 스웨디시, 타이마사지, 지압 비교 및 과학적 접근법 제공.">
-    <meta name="robots" content="index, follow">
-    <style>
-        /* RESET */
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-        html { font-size: 16px; scroll-behavior: smooth; }
-        body { font-family: 'Courier New', Courier, monospace; background: #f5f0eb; color: #1a1a1a; line-height: 1.6; min-height: 100vh; }
-        img { max-width: 100%; height: auto; display: block; }
-        /* BRUTALIST DNA */
-        h1, h2, h3, h4, h5, h6 { font-weight: 900; text-transform: uppercase; letter-spacing: -0.02em; }
-        h1 { font-size: 3.5rem; line-height: 1; margin-bottom: 1rem; border-left: 8px solid #d32f2f; padding-left: 1rem; }
-        h2 { font-size: 2.2rem; margin-bottom: 1.2rem; border-bottom: 4px solid #1a1a1a; padding-bottom: 0.3rem; }
-        h3 { font-size: 1.6rem; margin-bottom: 0.8rem; }
-        a { color: #d32f2f; text-decoration: underline; text-underline-offset: 4px; font-weight: 700; }
-        a:hover { color: #1a1a1a; background: #ffeb3b; text-decoration: none; }
-        .btn { display: inline-block; padding: 0.8rem 2rem; background: #1a1a1a; color: #f5f0eb; text-decoration: none; font-weight: 900; text-transform: uppercase; border: 4px solid #1a1a1a; transition: all 0.1s ease; }
-        .btn:hover { background: #d32f2f; border-color: #d32f2f; color: #fff; }
-        .btn-outline { background: transparent; color: #1a1a1a; border: 4px solid #1a1a1a; }
-        .btn-outline:hover { background: #1a1a1a; color: #f5f0eb; }
-        /* LAYOUT */
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
-        /* NAVIGATION */
-        .nav { background: #1a1a1a; padding: 1rem 0; position: sticky; top: 0; z-index: 1000; }
-        .nav .container { display: flex; justify-content: space-between; align-items: center; }
-        .nav-logo { font-size: 1.8rem; font-weight: 900; color: #f5f0eb; text-decoration: none; text-transform: uppercase; letter-spacing: -0.03em; }
-        .nav-links { display: flex; gap: 2rem; list-style: none; }
-        .nav-links a { color: #f5f0eb; text-decoration: none; font-weight: 700; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 0.05em; }
-        .nav-links a:hover { color: #ffeb3b; background: transparent; }
-        .hamburger { display: none; flex-direction: column; cursor: pointer; gap: 5px; }
-        .hamburger span { width: 30px; height: 4px; background: #f5f0eb; }
-        @media (max-width: 768px) {
-            .hamburger { display: flex; }
-            .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; width: 100%; background: #1a1a1a; padding: 1rem 0; text-align: center; }
-            .nav-links.active { display: flex; }
-            .nav-links li { margin: 0.5rem 0; }
-        }
-        /* HERO */
-        .hero { padding: 4rem 0; border-bottom: 6px solid #1a1a1a; }
-        .hero h1 { font-size: 4rem; }
-        .hero p { font-size: 1.2rem; max-width: 700px; margin-top: 1rem; }
-        /* CARDS */
-        .card { background: #fff; border: 4px solid #1a1a1a; padding: 1.5rem; margin-bottom: 2rem; transition: all 0.1s ease; }
-        .card:hover { transform: translate(-4px, -4px); box-shadow: 8px 8px 0 #1a1a1a; }
-        .card h3 { margin-bottom: 0.5rem; }
-        .card .meta { font-size: 0.85rem; color: #666; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.8rem; }
-        .card p { margin-bottom: 1rem; }
-        .card .btn { margin-top: 0.5rem; }
-        /* BLOG CONTENT */
-        .blog-content { padding: 3rem 0; }
-        .blog-content article { max-width: 800px; margin: 0 auto; }
-        .blog-content p { margin-bottom: 1.5rem; font-size: 1.1rem; }
-        .blog-content ul, .blog-content ol { margin-bottom: 1.5rem; padding-left: 2rem; }
-        .blog-content li { margin-bottom: 0.5rem; }
-        .blog-content blockquote { border-left: 6px solid #d32f2f; padding-left: 1.5rem; margin: 2rem 0; font-style: italic; background: #e0d6cc; padding: 1rem; }
-        .blog-content .data-point { background: #1a1a1a; color: #f5f0eb; padding: 0.2rem 0.5rem; font-weight: 900; }
-        /* FOOTER */
-        .footer { background: #1a1a1a; color: #f5f0eb; padding: 2rem 0; margin-top: 3rem; text-align: center; }
-        .footer a { color: #ffeb3b; }
-        .tel-link { display: inline-block; background: #d32f2f; color: #fff; padding: 0.5rem 1.5rem; font-weight: 900; text-decoration: none; border: 3px solid #d32f2f; margin-top: 1rem; }
-        .tel-link:hover { background: #1a1a1a; border-color: #ffeb3b; color: #ffeb3b; }
-    </style>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>공덕 마사지 정보 블로그 | 스웨디시·타이마사지 전문가 인사이트</title>
+ <meta name="description" content="공덕 마사지 정보를 전문가 시각으로 분석합니다. 공덕역 주변 마사지 업체의 스웨디시, 타이마사지, 지압 비교 및 과학적 접근법 제공.">
+ <meta name="keywords" content="공덕 마사지 정보, 공덕역 마사지 블로그, 공덕 스웨디시 정보, 공덕 타이마사지 가이드, 공덕 지압 추천, 마사지 비교 분석">
+ <link rel="canonical" href="https://gongdeok-body-info.namanavi.com/blog.html">
+ <meta property="og:title" content="공덕 마사지 정보 블로그 | 스웨디시·타이마사지 전문가 인사이트">
+ <meta property="og:description" content="공덕 마사지 정보를 전문가 시각으로 분석합니다. 공덕역 주변 마사지 업체의 스웨디시, 타이마사지, 지압 비교 및 과학적 접근법 제공.">
+ <meta name="robots" content="index, follow">
+ <style>
+ /* RESET */
+ *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ html { font-size: 16px; scroll-behavior: smooth; }
+ body { font-family: 'Courier New', Courier, monospace; background: #f5f0eb; color: #1a1a1a; line-height: 1.6; min-height: 100vh; }
+ img { max-width: 100%; height: auto; display: block; }
+ /* BRUTALIST DNA */
+ h1, h2, h3, h4, h5, h6 { font-weight: 900; text-transform: uppercase; letter-spacing: -0.02em; }
+ h1 { font-size: 3.5rem; line-height: 1; margin-bottom: 1rem; border-left: 8px solid #d32f2f; padding-left: 1rem; }
+ h2 { font-size: 2.2rem; margin-bottom: 1.2rem; border-bottom: 4px solid #1a1a1a; padding-bottom: 0.3rem; }
+ h3 { font-size: 1.6rem; margin-bottom: 0.8rem; }
+ a { color: #d32f2f; text-decoration: underline; text-underline-offset: 4px; font-weight: 700; }
+ a:hover { color: #1a1a1a; background: #ffeb3b; text-decoration: none; }
+ .btn { display: inline-block; padding: 0.8rem 2rem; background: #1a1a1a; color: #f5f0eb; text-decoration: none; font-weight: 900; text-transform: uppercase; border: 4px solid #1a1a1a; transition: all 0.1s ease; }
+ .btn:hover { background: #d32f2f; border-color: #d32f2f; color: #fff; }
+ .btn-outline { background: transparent; color: #1a1a1a; border: 4px solid #1a1a1a; }
+ .btn-outline:hover { background: #1a1a1a; color: #f5f0eb; }
+ /* LAYOUT */
+ .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+ /* NAVIGATION */
+ .nav { background: #1a1a1a; padding: 1rem 0; position: sticky; top: 0; z-index: 1000; }
+ .nav .container { display: flex; justify-content: space-between; align-items: center; }
+ .nav-logo { font-size: 1.8rem; font-weight: 900; color: #f5f0eb; text-decoration: none; text-transform: uppercase; letter-spacing: -0.03em; }
+ .nav-links { display: flex; gap: 2rem; list-style: none; }
+ .nav-links a { color: #f5f0eb; text-decoration: none; font-weight: 700; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 0.05em; }
+ .nav-links a:hover { color: #ffeb3b; background: transparent; }
+ .hamburger { display: none; flex-direction: column; cursor: pointer; gap: 5px; }
+ .hamburger span { width: 30px; height: 4px; background: #f5f0eb; }
+ @media (max-width: 768px) {
+ .hamburger { display: flex; }
+ .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; width: 100%; background: #1a1a1a; padding: 1rem 0; text-align: center; }
+ .nav-links.active { display: flex; }
+ .nav-links li { margin: 0.5rem 0; }
+ }
+ /* HERO */
+ .hero { padding: 4rem 0; border-bottom: 6px solid #1a1a1a; }
+ .hero h1 { font-size: 4rem; }
+ .hero p { font-size: 1.2rem; max-width: 700px; margin-top: 1rem; }
+ /* CARDS */
+ .card { background: #fff; border: 4px solid #1a1a1a; padding: 1.5rem; margin-bottom: 2rem; transition: all 0.1s ease; }
+ .card:hover { transform: translate(-4px, -4px); box-shadow: 8px 8px 0 #1a1a1a; }
+ .card h3 { margin-bottom: 0.5rem; }
+ .card .meta { font-size: 0.85rem; color: #666; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.8rem; }
+ .card p { margin-bottom: 1rem; }
+ .card .btn { margin-top: 0.5rem; }
+ /* BLOG CONTENT */
+ .blog-content { padding: 3rem 0; }
+ .blog-content article { max-width: 800px; margin: 0 auto; }
+ .blog-content p { margin-bottom: 1.5rem; font-size: 1.1rem; }
+ .blog-content ul, .blog-content ol { margin-bottom: 1.5rem; padding-left: 2rem; }
+ .blog-content li { margin-bottom: 0.5rem; }
+ .blog-content blockquote { border-left: 6px solid #d32f2f; padding-left: 1.5rem; margin: 2rem 0; font-style: italic; background: #e0d6cc; padding: 1rem; }
+ .blog-content .data-point { background: #1a1a1a; color: #f5f0eb; padding: 0.2rem 0.5rem; font-weight: 900; }
+ /* FOOTER */
+ .footer { background: #1a1a1a; color: #f5f0eb; padding: 2rem 0; margin-top: 3rem; text-align: center; }
+ .footer a { color: #ffeb3b; }
+ .tel-link { display: inline-block; background: #d32f2f; color: #fff; padding: 0.5rem 1.5rem; font-weight: 900; text-decoration: none; border: 3px solid #d32f2f; margin-top: 1rem; }
+ .tel-link:hover { background: #1a1a1a; border-color: #ffeb3b; color: #ffeb3b; }
+ </style>
   <meta property="og:url" content="https://gongdeok-body-info.namanavi.com/blog.html">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary">
@@ -78,41 +76,41 @@
 <body>
 
 <main class="container">
-  <section class="hero">
-    <h1>스웨디시와 타이마사지, 무엇이 다를까</h1>
-    <p class="meta">공덕 지역 정보 안내 · 마사지 관리 유형 비교</p>
-  </section>
+ <section class="hero">
+ <h1>스웨디시와 타이마사지, 무엇이 다를까</h1>
+ <p class="meta">공덕 지역 정보 안내 · 마사지 관리 유형 비교</p>
+ </section>
 
-  <article class="blog-content">
-    <p>공덕역 인근에서 마사지를 처음 알아보는 분들이 가장 많이 마주치는 고민은 관리 유형 선택입니다. 이름은 들어봤지만 정확한 차이를 모르는 경우가 많아, 스웨디시와 타이 마사지의 기본적인 특징을 정리했습니다.</p>
+ <article class="blog-content">
+ <p>공덕역 인근에서 마사지를 처음 알아보는 분들이 가장 많이 마주치는 고민은 관리 유형 선택입니다. 이름은 들어봤지만 정확한 차이를 모르는 경우가 많아, 스웨디시와 타이 마사지의 기본적인 특징을 정리했습니다.</p>
 
-    <h2>스웨디시 마사지의 특징</h2>
-    <p>오일을 사용해 근육을 풀어주는 방식으로, 비교적 부드러운 압력으로 전신의 순환을 돕는 데 초점을 맞춥니다. 처음 마사지를 접하는 분들에게 진입 장벽이 낮은 편으로 소개되는 유형입니다.</p>
-    <div class="data-point">
-      <p>공통적으로 오일과 마찰을 이용한 관리 방식이 기본 구성으로 안내되는 경우가 많습니다.</p>
-    </div>
+ <h2>스웨디시 마사지의 특징</h2>
+ <p>오일을 사용해 근육을 풀어주는 방식으로, 비교적 부드러운 압력으로 전신의 순환을 돕는 데 초점을 맞춥니다. 처음 마사지를 접하는 분들에게 진입 장벽이 낮은 편으로 소개되는 유형입니다.</p>
+ <div class="data-point">
+ <p>공통적으로 오일과 마찰을 이용한 관리 방식이 기본 구성으로 안내되는 경우가 많습니다.</p>
+ </div>
 
-    <h2>타이 마사지의 특징</h2>
-    <p>오일 없이 스트레칭과 지압을 결합한 방식으로, 관절 가동 범위를 넓히고 근막을 이완하는 데 중점을 둡니다. 활동량이 많거나 뭉침이 심한 경우 선호되는 편으로 안내됩니다.</p>
-    <div class="data-point">
-      <p>바닥 매트나 별도 공간에서 진행되는 경우가 많아 오일 마사지와 진행 공간 자체가 다를 수 있습니다.</p>
-    </div>
+ <h2>타이 마사지의 특징</h2>
+ <p>오일 없이 스트레칭과 지압을 결합한 방식으로, 관절 가동 범위를 넓히고 근막을 이완하는 데 중점을 둡니다. 활동량이 많거나 뭉침이 심한 경우 선호되는 편으로 안내됩니다.</p>
+ <div class="data-point">
+ <p>바닥 매트나 별도 공간에서 진행되는 경우가 많아 오일 마사지와 진행 공간 자체가 다를 수 있습니다.</p>
+ </div>
 
-    <h2>공덕에서 관리 유형을 고르는 기준</h2>
-    <p>목적에 따라 선택 기준이 달라집니다. 단순히 피로를 풀고 싶다면 스웨디시 계열이, 뭉친 부위를 집중적으로 풀고 싶다면 타이 마사지 계열이 더 맞는다고 소개되는 경우가 많습니다. 다만 업체마다 명칭과 구성이 다르게 운영될 수 있어 사전 확인이 필요합니다.</p>
-    <div class="card">
-      <h3>선택 전 확인할 점</h3>
-      <ul>
-        <li>관리 부위가 전신인지 부분인지</li>
-        <li>오일 사용 여부와 알레르기 유무</li>
-        <li>소요 시간과 강도 조절 가능 여부</li>
-        <li>탈의 범위 및 개인 물품 정책</li>
-      </ul>
-    </div>
+ <h2>공덕에서 관리 유형을 고르는 기준</h2>
+ <p>목적에 따라 선택 기준이 달라집니다. 단순히 피로를 풀고 싶다면 스웨디시 계열이, 뭉친 부위를 집중적으로 풀고 싶다면 타이 마사지 계열이 더 맞는다고 소개되는 경우가 많습니다. 다만 업체마다 명칭과 구성이 다르게 운영될 수 있어 사전 확인이 필요합니다.</p>
+ <div class="card">
+ <h3>선택 전 확인할 점</h3>
+ <ul>
+ <li>관리 부위가 전신인지 부분인지</li>
+ <li>오일 사용 여부와 알레르기 유무</li>
+ <li>소요 시간과 강도 조절 가능 여부</li>
+ <li>탈의 범위 및 개인 물품 정책</li>
+ </ul>
+ </div>
 
-    <h2>예약 전 참고할 점</h2>
-    <p>운영 시간, 예약 필요 여부, 정확한 비용은 업체별로 차이가 크기 때문에 이 글에서 특정 수치를 안내하지는 않습니다. 방문 전 전화로 직접 확인하는 절차를 거치는 것이 가장 안전합니다. 문의는 각 업체 정보를 통해 개별적으로 진행해 주세요.</p>
-  </article>
+ <h2>예약 전 참고할 점</h2>
+ <p>운영 시간, 예약 필요 여부, 정확한 비용은 업체별로 차이가 크기 때문에 이 글에서 특정 수치를 안내하지는 않습니다. 방문 전 전화로 직접 확인하는 절차를 거치는 것이 가장 안전합니다. 문의는 각 업체 정보를 통해 개별적으로 진행해 주세요.</p>
+ </article>
 </main>
 
 
