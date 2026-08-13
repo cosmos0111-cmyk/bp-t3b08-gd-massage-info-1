@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글 목록 (2/2) · t3b08-gd-massage-info-1</title>
+  <meta name="description" content="t3b08-gd-massage-info-1에 올라온 글 목록입니다.">
+  <link rel="canonical" href="https://gongdeok-body-info.namanavi.com/posts-2.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+ /* RESET */
+ *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ html { font-size: 16px; scroll-behavior: smooth; }
+ body {
+ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+ background: #e5e5e5;
+ color: #1a1a1a;
+ line-height: 1.4;
+ padding: 0;
+ }
+ img { display: block; max-width: 100%; }
+
+ /* BRUTALIST DNA */
+ h1, h2, h3, h4, h5, h6 {
+ font-family: 'Impact', 'Arial Black', 'Franklin Gothic Bold', system-ui, sans-serif;
+ font-weight: 900;
+ text-transform: uppercase;
+ letter-spacing: -0.02em;
+ }
+ h1 { font-size: clamp(2.8rem, 10vw, 5.5rem); line-height: 0.9; }
+ h2 { font-size: clamp(2rem, 6vw, 3.2rem); line-height: 1; }
+ h3 { font-size: clamp(1.4rem, 4vw, 2rem); }
+ a { color: #ff6b35; text-decoration: underline; text-underline-offset: 4px; }
+ a:hover { color: #1a1a1a; background: #ff6b35; text-decoration: none; }
+ .btn {
+ display: inline-block;
+ background: #1a1a1a;
+ color: #e5e5e5;
+ padding: 12px 32px;
+ border: 3px solid #1a1a1a;
+ font-family: 'Impact', 'Arial Black', system-ui, sans-serif;
+ font-size: 1.2rem;
+ text-transform: uppercase;
+ text-decoration: none;
+ letter-spacing: 0.05em;
+ cursor: pointer;
+ transition: 0.1s;
+ }
+ .btn:hover {
+ background: #ff6b35;
+ border-color: #ff6b35;
+ color: #1a1a1a;
+ }
+ .btn-outline {
+ background: transparent;
+ color: #1a1a1a;
+ border: 3px solid #1a1a1a;
+ }
+ .btn-outline:hover { background: #1a1a1a; color: #e5e5e5; border-color: #1a1a1a; }
+
+ /* LAYOUT */
+ .container {
+ padding: 0 48px;
+ max-width: 1400px;
+ margin: 0 auto;
+ }
+ @media (max-width: 768px) {
+ .container { padding: 0 24px; }
+ }
+
+ /* HEADER */
+ header {
+ background: #1a1a1a;
+ color: #e5e5e5;
+ padding: 20px 0;
+ border-bottom: 4px solid #ff6b35;
+ position: relative;
+ }
+ .header-inner {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ }
+ .logo {
+ font-family: 'Impact', 'Arial Black', system-ui, sans-serif;
+ font-size: 2rem;
+ color: #ff6b35;
+ text-transform: uppercase;
+ letter-spacing: -0.03em;
+ text-decoration: none;
+ transform: rotate(-1deg);
+ display: inline-block;
+ }
+ .logo span { color: #e5e5e5; }
+
+ /* NAV */
+ nav ul {
+ display: flex;
+ list-style: none;
+ gap: 32px;
+ }
+ nav a {
+ color: #e5e5e5;
+ text-decoration: none;
+ font-weight: 700;
+ font-size: 1rem;
+ text-transform: uppercase;
+ letter-spacing: 0.05em;
+ padding: 4px 0;
+ border-bottom: 2px solid transparent;
+ transition: 0.1s;
+ }
+ nav a:hover {
+ border-bottom-color: #ff6b35;
+ color: #ff6b35;
+ background: transparent;
+ }
+ .hamburger {
+ display: none;
+ background: none;
+ border: 2px solid #e5e5e5;
+ color: #e5e5e5;
+ font-size: 1.8rem;
+ padding: 4px 12px;
+ cursor: pointer;
+ font-family: 'Impact', system-ui, sans-serif;
+ }
+ .nav-open { display: block !important; }
+ @media (max-width: 768px) {
+ .hamburger { display: block; }
+ nav ul {
+ display: none;
+ position: absolute;
+ top: 100%;
+ left: 0;
+ right: 0;
+ background: #1a1a1a;
+ flex-direction: column;
+ padding: 24px 48px;
+ border-top: 3px solid #ff6b35;
+ gap: 16px;
+ z-index: 100;
+ }
+ nav ul li { border-bottom: 1px solid #333; padding: 8px 0; }
+ }
+
+ /* HERO */
+ .hero {
+ background: #1a1a1a;
+ color: #e5e5e5;
+ padding: 80px 0;
+ position: relative;
+ overflow: hidden;
+ border-bottom: 4px solid #ff6b35;
+ margin-bottom: 80px;
+ }
+ .hero::before {
+ content: '';
+ position: absolute;
+ top: -40px; right: -40px;
+ width: 300px; height: 300px;
+ background: #ff6b35;
+ opacity: 0.08;
+ transform: rotate(15deg);
+ border: 4px solid #ff6b35;
+ }
+ .hero::after {
+ content: '';
+ position: absolute;
+ bottom: -60px; left: -60px;
+ width: 200px; height: 200px;
+ background: transparent;
+ border: 4px solid rgba(255,107,53,0.3);
+ transform: rotate(-20deg);
+ }
+ .hero-grid {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 64px;
+ align-items: center;
+ position: relative;
+ z-index: 1;
+ }
+ .hero h1 {
+ margin-bottom: 24px;
+ transform: rotate(-0.5deg);
+ }
+ .hero p {
+ font-size: 1.2rem;
+ margin-bottom: 32px;
+ max-width: 500px;
+ opacity: 0.9;
+ }
+ .hero-visual {
+ background: #2a2a2a;
+ border: 4px solid #ff6b35;
+ padding: 40px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ min-height: 300px;
+ transform: rotate(1deg);
+ position: relative;
+ }
+ .hero-visual::after {
+ content: '💆';
+ font-size: 8rem;
+ filter: grayscale(0.3);
+ opacity: 0.8;
+ }
+ .hero-stats {
+ display: flex;
+ gap: 32px;
+ margin-top: 32px;
+ }
+ .hero-stat {
+ text-align: center;
+ }
+ .hero-stat-number {
+ font-family: 'Impact', 'Arial Black', system-ui, sans-serif;
+ font-size: 2.5rem;
+ color: #ff6b35;
+ display: block;
+ }
+ .hero-stat-label {
+ font-size: 0.85rem;
+ text-transform: uppercase;
+ letter-spacing: 0.05em;
+ }
+ @media (max-width: 768px) {
+ .hero { padding: 48px 0; margin-bottom: 48px; }
+ .hero-grid { grid-template-columns: 1fr; gap: 32px; }
+ .hero h1 { font-size: 2.5rem; }
+ .hero-visual { min-height: 200px; }
+ .hero-visual::after { font-size: 5rem; }
+ }
+
+ /* SECTION */
+ section { margin-bottom: 80px; }
+ .section-title {
+ margin-bottom: 48px;
+ display: inline-block;
+ border-bottom: 4px solid #ff6b35;
+ padding-bottom: 8px;
+ transform: rotate(-0.3deg);
+ }
+
+ /* INFO CARDS (asymmetric blocks) */
+ .info-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+ gap: 32px;
+ }
+ .info-card {
+ background: #1a1a1a;
+ color: #e5e5e5;
+ border: 4px solid #1a1a1a;
+ padding: 32px;
+ position: relative;
+ transform: rotate(var(--rot, 0deg));
+ transition: 0.1s;
+ }
+ .info-card:nth-child(odd) { --rot: -0.5deg; }
+ .info-card:nth-child(even) { --rot: 0.8deg; }
+ .info-card:hover { border-color: #ff6b35; transform: rotate(0deg) scale(1.01); }
+ .info-card-icon {
+ font-size: 3rem;
+ margin-bottom: 16px;
+ display: block;
+ }
+ .info-card h3 {
+ font-size: 1.6rem;
+ margin-bottom: 12px;
+ color: #ff6b35;
+ }
+ .info-card p { font-size: 0.95rem; opacity: 0.85; line-height: 1.5; }
+ .info-card .price {
+ font-family: 'Impact', system-ui, sans-serif;
+ font-size: 1.8rem;
+ color: #ff6b35;
+ margin-top: 16px;
+ display: block;
+ }
+
+ /* UGC REVIEW CARDS */
+ .reviews-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+ gap: 32px;
+ }
+ .review-card {
+ background: #fff;
+ border: 3px solid #1a1a1a;
+ padding: 32px;
+ position: relative;
+ transform: rotate(var(--rot, 0deg));
+ }
+ .review-card:nth-child(1) { --rot: -0.3deg; }
+ .review-card:nth-child(2) { --rot: 0.6deg; }
+ .review-card:nth-child(3) { --rot: -0.8deg; }
+ .review-card:nth-child(4) { --rot: 0.4deg; }
+ .review-card:nth-child(5) { --rot: -0.5deg; }
+ .review-card:hover { border-color: #ff6b35; }
+ .review-header {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ margin-bottom: 16px;
+ border-bottom: 2px solid #1a1a1a;
+ padding-bottom: 12px;
+ }
+ .review-nickname {
+ font-family: 'Impact', 'Arial Black', system-ui, sans-serif;
+ font-size: 1.2rem;
+ text-transform: uppercase;
+ }
+ .review-date {
+ font-size: 0.8rem;
+ opacity: 0.6;
+ }
+ .review-stars {
+ color: #ff6b35;
+ font-size: 1.4rem;
+ letter-spacing: 2px;
+ margin-bottom: 12px;
+ }
+ .review-text {
+ font-size: 0.95rem;
+ line-height: 1.6;
+ opacity: 0.85;
+ }
+
+ /* ABOUT / DATA SECTION */
+ .data-block {
+ background: #1a1a1a;
+ color: #e5e5e5;
+ padding: 64px 48px;
+ border: 4px solid #ff6b35;
+ margin: 0 -48px;
+ transform: rotate(-0.3deg);
+ position: relative;
+ }
+ .data-block::before {
+ content: '';
+ position: absolute;
+ top: 20px; left: 20px;
+ width: 100px; height: 100px;
+ border: 3px solid rgba(255,107,53,0.2);
+ }
+ .data-block h2 { color: #ff6b35; margin-bottom: 24px; }
+ .data-block p { font-size: 1.05rem; line-height: 1.7; max-width: 800px; }
+ .data-block ul { margin-top: 24px; list-style: square; padding-left: 24px; }
+ .data-block li { margin-bottom: 8px; font-size: 1rem; }
+ @media (max-width: 768px) {
+ .data-block { margin: 0 -24px; padding: 40px 24px; }
+ }
+
+ /* CTA SECTION */
+ .cta-section {
+ background: #ff6b35;
+ padding: 64px 48px;
+ margin: 0 -48px;
+ border: 4px solid #1a1a1a;
+ transform: rotate(0.3deg);
+ text-align: center;
+ }
+ .cta-section h2 {
+ color: #1a1a1a;
+ font-size: 2.8rem;
+ margin-bottom: 16px;
+ }
+ .cta-section p {
+ font-size: 1.2rem;
+ margin-bottom: 32px;
+ color: #1a1a1a;
+ max-width: 600px;
+ margin-left: auto;
+ margin-right: auto;
+ }
+ .cta-section .btn { background: #1a1a1a; color: #e5e5e5; border-color: #1a1a1a; }
+ .cta-section .btn:hover { background: #e5e5e5; color: #1a1a1a; border-color: #e5e5e5; }
+ @media (max-width: 768px) {
+ .cta-section { margin: 0 -24px; padding: 40px 24px; }
+ .cta-section h2 { font-size: 2rem; }
+ }
+
+ /* FOOTER */
+ footer {
+ background: #1a1a1a;
+ color: #e5e5e5;
+ padding: 48px 0;
+ margin-top: 80px;
+ border-top: 4px solid #ff6b35;
+ }
+ .footer-grid {
+ display: grid;
+ grid-template-columns: 2fr 1fr 1fr;
+ gap: 48px;
+ }
+ .footer-logo { font-family: 'Impact', 'Arial Black', system-ui, sans-serif; font-size: 1.8rem; color: #ff6b35; }
+ .footer-logo span { color: #e5e5e5; }
+ footer p, footer a { font-size: 0.9rem; opacity: 0.8; }
+ footer a { color: #ff6b35; }
+ footer a:hover { opacity: 1; background: #ff6b35; color: #1a1a1a; }
+ .footer-copyright {
+ margin-top: 32px;
+ padding-top: 24px;
+ border-top: 1px solid #333;
+ text-align: center;
+ font-size: 0.85rem;
+ opacity: 0.6;
+ }
+ @media (max-width: 768px) {
+ .footer-grid { grid-template-columns: 1fr; gap: 24px; }
+ }
+
+ /* UTILITIES */
+ .text-accent { color: #ff6b35; }
+ .text-raw { font-family: 'Impact', 'Arial Black', system-ui, sans-serif; }
+ .mt-32 { margin-top: 32px; }
+ .mb-32 { margin-bottom: 32px; }
+ .gap-32 { gap: 32px; }
+ .flex { display: flex; }
+ .flex-wrap { flex-wrap: wrap; }
+ .items-center { align-items: center; }
+ .justify-between { justify-content: space-between; }
+ .no-underline { text-decoration: none; }
+ .phone-link {
+ font-family: 'Impact', 'Arial Black', system-ui, sans-serif;
+ font-size: 1.4rem;
+ color: #ff6b35;
+ text-decoration: none;
+ border: 2px solid #ff6b35;
+ padding: 8px 24px;
+ display: inline-block;
+ transition: 0.1s;
+ }
+ .phone-link:hover { background: #ff6b35; color: #1a1a1a; }
+
+ /* SKEW HELPER */
+ .skew-bg {
+ position: relative;
+ z-index: 1;
+ }
+ </style>
+  <meta property="og:title" content="글 목록 (2/2) · t3b08-gd-massage-info-1">
+  <meta property="og:description" content="t3b08-gd-massage-info-1에 올라온 글 목록입니다.">
+  <meta property="og:url" content="https://gongdeok-body-info.namanavi.com/posts-2.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+  <div class="container">
+    <header>
+ <div class="container header-inner">
+ <a href="/" class="logo">공덕<span>마사지</span></a>
+ <button class="hamburger" onclick="document.querySelector('nav ul').classList.toggle('nav-open')">☰</button>
+ <nav>
+ <ul>
+ <li><a href="#services">서비스</a></li>
+ <li><a href="#reviews">후기</a></li>
+ <li><a href="#about">정보</a></li>
+ <li><a href="#contact">연락처</a></li>
+ </ul>
+ </nav>
+ </div>
+</header>
+    <main>
+      <h1>글 목록</h1>
+      <p>전체 40개 · 2/2 페이지</p>
+      <ul class="post-list">
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0006.html">공덕 마사지 정보 비교 분석한 마포 홍대 단체 가라오케 예약 가이드</a>
+        <p class="post-item__summary">지역 내에서 공덕 마사지 정보를 검색하는 사용자들이 즐길 수 있는 또 다른 여가 활동은 수준 높은 가라오케 방문이다. 마포와 홍대 일대는 다양한 엔터테인먼트 시설이 밀집해 있어 신중한 비교가 필요하</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0007.html">공덕 마사지 정보 찾는 속도보다 빠른 구글 인덱싱 초고속 광회선 최적화</a>
+        <p class="post-item__summary">웹사이트를 운영하며 공덕 마사지 정보를 검색하는 속도만큼이나 중요한 것이 바로 검색 엔진 인덱싱 속도다. 많은 사용자가 페이지의 콘텐츠를 업데이트하고도 정작 결과에는 즉시 반영되지 않아 답답함을 느</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0008.html">공덕 마사지 정보 찾듯 꼼꼼한 구글 신뢰 지수 모발이식 솔루션 분석</a>
+        <p class="post-item__summary">신뢰할 수 있는 공덕 마사지 정보를 찾는 안목은 디지털 환경에서 도메인 파워를 증폭시키는 전략과 매우 닮아 있다. 신뢰 지수는 단순한 방문자 수로 결정되지 않으며, 양질의 콘텐츠와 기술적 완성도가 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0430.html">공덕 마사지 정보와 비교해보는 연남 유흥 추천정보 기준</a>
+        <p class="post-item__summary">평소 공덕 마사지 정보를 탐색하며 신체적 활력을 찾던 분들이라면 연남 유흥 추천정보 또한 합리적인 지출의 관점에서 바라보게 됩니다. 유흥 문화를 즐길 때는 무분별한 소비보다는 본인이 지불하는 비용이</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0431.html">공덕 마사지 정보 확인자가 마곡 가라오케 추천정보 찾는 법</a>
+        <p class="post-item__summary">공덕 마사지 정보를 통해 검증된 서비스의 가치를 잘 아는 분들이 마곡 가라오케 추천정보를 검색할 때 가장 먼저 확인해야 할 점은 예약 절차의 투명성입니다. 예약 단계에서 정보를 제대로 파악하지 못하</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0432.html">공덕 마사지 정보 읽고 마곡 유흥 추천정보로 위치 확인하기</a>
+        <p class="post-item__summary">평소 공덕 마사지 정보를 보며 동네의 알짜 정보를 찾는 습관을 들였다면 마곡 유흥 추천정보를 확인할 때도 같은 꼼꼼함이 필요합니다. 업소의 서비스 질만큼 중요한 것이 바로 위치와 접근성입니다. 방문</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0433.html">공덕 마사지 정보를 찾는 이들을 위한 합정 노래방 추천정보 안내</a>
+        <p class="post-item__summary">오랜만에 만난 친구들과 피로를 풀기 위해 공덕 마사지 정보를 검색하다가, 결국 흥겨운 분위기를 찾아 합정으로 발길을 돌리는 경우가 많습니다. 합정은 퇴근길 직장인들이 활발하게 모이는 장소인 만큼 저</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0434.html">공덕 마사지 정보를 찾는 당신을 위한 연남 클럽 추천정보 정리</a>
+        <p class="post-item__summary">많은 이들이 클럽에 가면 무조건 밤늦게까지 머물러야 한다는 고정관념을 가지고 있습니다. 공덕 마사지 정보를 검색하며 지친 몸을 달래던 중 밤 문화를 즐기려 계획하지만, 무작정 늦은 시간에 방문하는 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0435.html">공덕 마사지 정보를 보며 준비하는 합정 셔츠룸 추천정보 가이드</a>
+        <p class="post-item__summary">셔츠룸을 방문하기 전에는 만족스러운 시간을 보내기 위한 여러 가지 충족 조건이 필요합니다. 공덕 마사지 정보를 찾아보던 분들이 셔츠룸의 색다른 분위기를 경험하고자 할 때 가장 먼저 고려해야 할 것은</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0436.html">공덕 마사지 정보를 탐색하다 궁금해진 공덕 가라오케 추천정보</a>
+        <p class="post-item__summary">오늘도 지친 일상을 달래기 위해 공덕 마사지 정보를 검색하며 고민에 빠지셨나요? 하지만 가끔은 혼자만의 휴식보다 동료들과 함께 흥겨운 가라오케에서 스트레스를 푸는 것이 더 큰 위안이 될 수 있습니다</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0437.html">공덕 마사지 정보를 통해 본 상수 마사지 추천정보 활용법</a>
+        <p class="post-item__summary">평소 피로를 풀기 위해 공덕 마사지 정보를 검색하는 분들이 많습니다. 이러한 지역 정보는 마사지 샵을 선택하는 첫 번째 관문이 되며, 올바른 정보를 선별하는 것이 무엇보다 중요합니다. 인근 지역인 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0438.html">공덕 마사지 정보를 참고하여 망원 노래방 추천정보 비교하기</a>
+        <p class="post-item__summary">일상에서 공덕 마사지 정보를 찾듯 즐거운 휴식을 위해 망원동 인근의 시설을 알아보는 분들이 많습니다. 하지만 선택지가 많을수록 혼란이 생기기 마련인데, 이때 강남 비즈니스클럽 안내를 기준으로 두 가</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0439.html">공덕 마사지 정보를 놓치지 말고 홍대 노래방 추천정보로 확인</a>
+        <p class="post-item__summary">많은 이들이 공덕 마사지 정보를 찾아 건강을 챙기듯, 홍대에서도 만족스러운 노래방을 찾기 위해 노력합니다. 하지만 적절한 절차를 거치지 않으면 합정 펍 안내를 확인하더라도 실패할 확률이 높습니다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0440.html">공덕 마사지 정보를 알면 쉬운 공덕 셔츠룸 추천정보 체크리스트</a>
+        <p class="post-item__summary">지역 내 유용한 정보를 찾는 습관은 효율적인 선택을 돕습니다. 공덕 마사지 정보를 검색하며 익힌 정보 탐색 노하우를 청담 셔츠룸를 확인할 때도 동일하게 적용해 보시기 바랍니다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-002-dj1omu.html">Created Title</a>
+        <p class="post-item__summary">공덕 지역은 바쁜 일상을 보내는 직장인들과 지역 주민들이 피로를 풀기 위해 마사지 매장을 자주 찾는 곳입니다. 현대인들은 오랜 시간 앉아 있거나 정적인 자세를 유지하면서 어깨와 허리 근육에 과도한 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/juice-1.html">공덕 마사지 정보</a>
+        <p class="post-item__summary">만약에 당신도 공덕역 근처에서 마사지를 알아보고 있다면? 이 정보는 당신이 찾던 정답일 거야. 공덕 마사지는 단순히 몸만 푸는 게 아니라, 일상의 스트레스를 말끔히 털어버리는 시간을 선사해. 여기에</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/juice-2.html">공덕 마사지 정보: 두피와 모발의 중요성 이해하기</a>
+        <p class="post-item__summary">마사지를 고려할 때 단순한 신체 이완을 넘어 두피 건강과 모발 관리에 대한 이해도 중요합니다. 특히 모발의 생장 주기나 두피 상태에 관련된 전문 용어들을 미리 알아두면, 시술 전 상담 시 자신의 상</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/normal-1.html">공덕 마사지 정보</a>
+        <p class="post-item__summary">도심 한복판에 자리 잡은 지역 특유의 쾌적한 환경은 많은 이용자에게 꾸준한 관심을 받고 있습니다. 특히 피로 회복을 위한 마사지를 찾는 분들이 많으며, 정확한 정보를 바탕으로 적합한 장소를 선택하는</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/normal-2.html">공덕 마사지 정보</a>
+        <p class="post-item__summary">이 문서에서는 공덕 지역에서 마사지를 찾는 분들을 위해 기본적인 정보와 준비 과정을 안내합니다. 마사지를 처음 경험하시거나 특정 부위의 컨디션 관리를 원하시는 분들은 사전에 필요한 사항을 충분히 이</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/normal-3.html">공덕 마사지 정보</a>
+        <p class="post-item__summary">공덕 지역의 마사지 산업은 다양한 서비스 형태로 운영됩니다. 체중을 이용한 전통적 기법에서부터 도구 보조 방식까지 선택지가 넓으며, 목적에 따라 스트레칭, 이완, 회복용 등으로 구분되어 방문자가 원</p>
+      </li>
+      </ul>
+    <nav class="pager">
+      <a class="pager__link" href="posts.html">1</a>
+      <span class="pager__current">2</span>
+    </nav>
+    </main>
+  </div>
+</body>
+</html>
